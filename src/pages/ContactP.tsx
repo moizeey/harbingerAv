@@ -7,7 +7,7 @@ import { FaPhoneFlip } from "react-icons/fa6";
 import { FaEnvelope } from "react-icons/fa6";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function ContactP() {
   const [menuToggle, setMenuToggle] = useState(false);

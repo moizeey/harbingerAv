@@ -2,7 +2,7 @@ import { useState } from "react";
 import { navLinks } from "../constants";
 import { BsArrowRight } from "react-icons/bs";
 import { RxCross1 } from "react-icons/rx";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // import { IoSearchSharp } from "react-icons/io5";
 
 function Landing() {
@@ -10,10 +10,6 @@ function Landing() {
 
   const handleToggleMenu = () => {
     setMenuToggle(!menuToggle);
-  };
-
-  const handleOnClick = () => {
-    console.log("clicked");
   };
 
   return (

@@ -4,7 +4,7 @@ import { RxCross1 } from "react-icons/rx";
 import { solutions } from "../constants";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function AboutP() {
   const [menuToggle, setMenuToggle] = useState(false);

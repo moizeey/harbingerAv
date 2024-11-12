@@ -6,7 +6,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { navLinks } from "../constants";
 import { RxCross1 } from "react-icons/rx";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Service() {
   const [menuToggle, setMenuToggle] = useState(false);

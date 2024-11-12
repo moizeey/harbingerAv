@@ -2,7 +2,6 @@ import AboutP from "./pages/AboutP";
 import ContactP from "./pages/ContactP";
 import Home from "./pages/Home";
 import Service from "./pages/Service";
-import Contact from "./components/Contact";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
