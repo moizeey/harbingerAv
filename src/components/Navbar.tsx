@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { navLinks } from "../constants";
+import { UseMenu } from "../context/navContext";
+import { RxCross1 } from "react-icons/rx";
 
 function Navbar() {
-  const [menuToggle, setMenuToggle] = useState(false);
+  const { menuToggle, setMenuToggle } = UseMenu();
 
   const handleToggleMenu = () => {
     setMenuToggle(!menuToggle);
@@ -22,7 +24,14 @@ function Navbar() {
               <ul className=" space-x-6 lg:flex hidden">
                 {navLinks.map((item, index) => (
                   <li className="cursor-pointer relative group  " key={index}>
-                    {item.labe}
+                    <NavLink
+                      className={({ isActive }) => `
+              ${isActive ? "text-[#494964cf]" : "text:white"}
+              `}
+                      to={item.href}
+                    >
+                      {item.labe}
+                    </NavLink>
                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                   </li>
                 ))}
@@ -30,7 +39,7 @@ function Navbar() {
             </div>
             <div className="lg:hidden ">
               <button onClick={handleToggleMenu} className={`rotate-90  `}>
-                {menuToggle ? "k" : "|||"}
+                {menuToggle ? <RxCross1 /> : "|||"}
               </button>
             </div>
 
@@ -46,3 +55,29 @@ function Navbar() {
   );
 }
 export default Navbar;
+
+export const BurgerNav = () => {
+  const { menuToggle } = UseMenu();
+  return (
+    <>
+      {menuToggle && (
+        <div className="z-50 absolute top-20 bg-white font-heebo max-w-full lg:hidden w-full ">
+          <ul className=" px-10 py-4 md:text-md text-[#76767F] flex flex-col gap-4">
+            {navLinks.map((item, index) => (
+              <li className="cursor-pointer hover:underline" key={index}>
+                <NavLink
+                  className={({ isActive }) => `
+              ${isActive ? "text-[#121240CF]" : "text:white"}
+              `}
+                  to={item.href}
+                >
+                  {item.labe}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </>
+  );
+};
