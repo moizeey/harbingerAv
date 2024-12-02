@@ -1,11 +1,10 @@
 import { BsArrowRight } from "react-icons/bs";
-import Navbar, { BurgerNav } from "./Navbar";
+import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 function Landing() {
   return (
     <div>
-      <BurgerNav />
-
       <div className="bg-landing bg-cover bg-center  min-h-screen  relative font-heebo px-10 py-4">
         <div className="bg-[#121240CF] opacity-[100] absolute inset-0"></div>
         <div className="z-10  ">
@@ -36,18 +35,23 @@ function Landing() {
             </div>
             <div className="flex mt-10 gap-6   lg:flex-row flex-col   ">
               <button className="px-5 py-3 capitalize tracking-wide  bg-[#3535DE] text-white rounded-lg hover:bg-white hover:text-black">
-                get a free quote
+                <Link to={"/contact"}>get a free quote</Link>
               </button>
 
               <div className="space-x-3  flex items-center justify-center    capitalize tracking-wide cursor-pointer">
-                <span className="relative group">
-                  learn more
-                  <span className="absolute h-0.5 w-0 group-hover:w-full bg-white left-0 bottom-0 transition-all duration-300"></span>
-                </span>
+                <Link
+                  to={"/about"}
+                  className="flex items-center justify-center gap-2"
+                >
+                  <span className="relative group">
+                    learn more
+                    <span className="absolute h-0.5 w-0 group-hover:w-full bg-white left-0 bottom-0 transition-all duration-300"></span>
+                  </span>
 
-                <span className=" ">
-                  <BsArrowRight className="inline" />
-                </span>
+                  <span className=" ">
+                    <BsArrowRight className="inline" />
+                  </span>
+                </Link>
               </div>
             </div>
           </div>

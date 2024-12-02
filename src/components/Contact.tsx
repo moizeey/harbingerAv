@@ -9,6 +9,7 @@ type Submission = {
   email: string;
   phone: number;
   message: string;
+  status: string;
 };
 
 function Contact() {
@@ -17,11 +18,12 @@ function Contact() {
     phone: "",
     email: "",
     message: "",
+    status: "unread",
   });
 
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const formSubmissionsRef = collection(db, "form-submissions");
-
+  const [isLoading, setIsLoading] = useState(false);
   const handleOnChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -32,6 +34,7 @@ function Contact() {
   const handleOnSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      setIsLoading(true);
       const docRef = await addDoc(collection(db, "form-submissions"), formData);
       console.log("document written with ID: ", docRef.id);
 
@@ -50,10 +53,18 @@ function Contact() {
       console.log("Email sent successfully!");
       alert("Form submitted succesfully");
 
-      setFormData({ name: "", phone: "", email: "", message: "" });
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+        status: "unread",
+      });
     } catch (e) {
       console.error("error adding document: ", e);
       alert("error submitting form. ");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -67,7 +78,7 @@ function Contact() {
         })) as Submission[];
 
         setSubmissions(data);
-        console.log(submissions.map((data) => data.email));
+        console.log(submissions.map((data) => data));
       } catch (error) {
         console.error(error);
       }
@@ -137,10 +148,11 @@ function Contact() {
               required
             ></textarea>
             <button
+              disabled={isLoading}
               type="submit"
-              className="px-5 py-3 lg:w-1/2 font-heebo capitalize tracking-wide  bg-[#3535DE] text-white rounded-lg hover:bg-white hover:text-black"
+              className="px-5 py-3 lg:w-1/2 font-heebo capitalize tracking-wide disabled:bg-gray-300 disabled:hover:text-white  bg-[#3535DE] text-white rounded-lg hover:bg-white hover:text-black"
             >
-              Submit
+              {isLoading ? "Loading.." : "Submit"}
             </button>
           </form>
         </div>

@@ -1,5 +1,6 @@
 import { MenuProvider } from "./context/navContext";
 import AboutP from "./pages/AboutP";
+import Admin from "./pages/Admin";
 import ContactP from "./pages/ContactP";
 import Home from "./pages/Home";
 import Service from "./pages/Service";
@@ -15,6 +16,7 @@ function App() {
             <Route path="/services" element={<Service />} />
             <Route path="/about" element={<AboutP />} />
             <Route path="/contact" element={<ContactP />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </Router>
       </MenuProvider>

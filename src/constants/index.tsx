@@ -7,10 +7,10 @@ import { FaGlobe } from "react-icons/fa";
 import { FaChartLine } from "react-icons/fa";
 
 export const navLinks = [
-  { labe: "Home", href: "/" },
-  { labe: "Services", href: "/services" },
-  { labe: "About", href: "/about" },
-  { labe: "Contact", href: "/contact" },
+  { labe: "Home", href: "/", isActive: true },
+  { labe: "Services", href: "/services", isActive: false },
+  { labe: "About", href: "/about", isActive: false },
+  { labe: "Contact", href: "/contact", isActive: false },
 ];
 
 export const solutions = [

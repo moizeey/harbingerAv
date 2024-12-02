@@ -1,12 +1,11 @@
 import { solutions } from "../constants";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import Navbar, { BurgerNav } from "../components/Navbar";
+import Navbar from "../components/Navbar";
 
 function AboutP() {
   return (
     <div>
-      <BurgerNav />
       <div className="bg-[#121240] relative  font-heebo px-10 py-4 ">
         <div className="z-10  ">
           <img
