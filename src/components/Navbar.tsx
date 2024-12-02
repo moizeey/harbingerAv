@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { navLinks } from "../constants";
 import { UseMenu } from "../context/navContext";
 import { RxCross1 } from "react-icons/rx";
@@ -114,6 +114,9 @@ function Navbar() {
             <div className="space-x-6 lg:flex items-center hidden">
               <button className="px-5   capitalize tracking-wide py-3 bg-[#3535DE] text-white rounded-lg hover:bg-white hover:text-black">
                 get a free quote
+              </button>
+              <button>
+                <Link to={"/admin"}>admin</Link>
               </button>
             </div>
           </div>
