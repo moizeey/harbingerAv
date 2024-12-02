@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { navLinks } from "../constants";
 import { UseMenu } from "../context/navContext";
 import { RxCross1 } from "react-icons/rx";
