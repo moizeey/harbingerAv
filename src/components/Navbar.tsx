@@ -115,9 +115,6 @@ function Navbar() {
               <button className="px-5   capitalize tracking-wide py-3 bg-[#3535DE] text-white rounded-lg hover:bg-white hover:text-black">
                 get a free quote
               </button>
-              <button>
-                <Link to={"/admin"}>admin</Link>
-              </button>
             </div>
           </div>
         </div>
