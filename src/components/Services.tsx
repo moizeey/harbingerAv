@@ -21,8 +21,8 @@ function Services() {
               Take Your Business to the next Level
             </h1>
             <p className="text-center pt-6 text-[#76767F] tracking-wide md:w-[46rem]">
-              Id senectus facilisi enim accumsan ac aliquam suspendisse dapibus
-              morbi ut sed pellentesque elementum velit dictum
+              We offer tailored solutions to ensure that your business stands
+              out.
             </p>
           </div>
         </div>
@@ -37,7 +37,9 @@ function Services() {
                   {item.icon}
                 </div>
                 <h1 className="text-2xl font-[500]">{item.title}</h1>
-                <p className="text-[#76767F]  ">{item.description}</p>
+                <p className="text-[#76767F] text-center ">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>

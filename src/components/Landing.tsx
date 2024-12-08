@@ -23,13 +23,16 @@ function Landing() {
               </h1>
               <div className="flex flex-col gap-4">
                 <h1 className=" font-semibold leading-[3rem] md:leading-[5rem] lg:text-left text-[2.5rem]  text-center max-w-[50rem]  lg:text-[5rem] md:text-[4rem] sm:text-[3rem]  md:max-lg:max-w-[40rem]     md:text-left">
-                  Leading Internet Marketing Agency Based on Florida.
+                  Your Partner for Innovative Digital Solutions
                 </h1>
 
-                <p className="py-2 lg:text-left md:text-left  text-center max-w-[50rem] lg:text-3xl text-md sm:text-2xl">
-                  Sollicitudin eros nulla mus donec a quisque convallis integer
-                  condimentum volutpat felis sed aliquet netus dolor dictumst
-                  pellentesque.
+                <p className="py-2 lg:text-left md:text-left  text-center max-w-[50rem] lg:text-2xl text-md sm:text-xl">
+                  At Harbinger AR, we are passionate about empowering businesses
+                  with top-notch digital solutions that help you thrive in
+                  today’s fast-paced world. Based in Florida, we specialize in
+                  offering end-to-end services to fuel your growth. From
+                  creative development to automation and optimization, we have
+                  the expertise to turn your ideas into reality.
                 </p>
               </div>
             </div>

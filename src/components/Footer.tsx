@@ -6,10 +6,7 @@ function Footer() {
       <div className="pt-10 border-b border-white  w-full flex-wrap gap-y-10 font-heebo flex justify-between  px-20  pb-10 ">
         <div className="sm:w-1/2 w-full lg:w-1/3 space-y-4 m-auto sm:border-none  border-b border-[#3C3C42] pb-6 ">
           <h1 className=" md:text-2xl text-xl font-semibold">Harbinger AR</h1>
-          <p className=" w-[80%]">
-            Volutpat commodo at dictum amet tincidunt facilisis id lorem eu
-            vitae cursus auctor laoreet fermentum.
-          </p>
+          <p className=" w-[80%]">Your trusted partner for digital growth.</p>
         </div>
         <div className="sm:w-1/2 w-full lg:w-1/3  border-b sm:border-b-0 pb-6 sm:pb-0 sm:border-l sm:pl-10 border-[#3C3C42] space-y-4 m-auto  ">
           <h1 className="pr-7 text-xl font-semibold md:text-2xl ">About</h1>
@@ -35,7 +32,7 @@ function Footer() {
       </div>
       <div className="py-10 px-10">
         <h1 className="text-center">
-          © 2024 Digital Marketing Agency | Powered by Digital Marketing Agency
+          © 2024 Digital Agency | Powered by Harbinger AR
         </h1>
       </div>
     </div>

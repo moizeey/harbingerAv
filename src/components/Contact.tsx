@@ -91,7 +91,7 @@ function Contact() {
       <div className="flex  flex-col lg:flex-row  gap-16 px-10 ">
         <div className="lg:w-1/2 flex flex-col gap-8 lg:border-r lg:border-b-0  border-b border-[#3C3C42] lg:pb-0 pb-10 lg:pr-20">
           <h1 className="text-2xl lg:text-4xl font-semibold  tracking-wide">
-            Ready to Take Your Internet Marketing to the next Level?
+            Ready to Take Your Bussiness to the next Level?
           </h1>
           <p className=" font-semibold text-md tracking-wide">
             Amet ut elementum, ipsum lobortis amet, ut duis facilisis purus
@@ -99,10 +99,10 @@ function Contact() {
             nunc justo.
           </p>
           <p className=" ">
-            Risus tincidunt in laoreet risus dignissim montes, velit egestas eu
-            nec et in tincidunt amet, etiam at turpis adipiscing volutpat amet,
-            adipiscing purus elementum risus, vitae euismod leo amet eget quam
-            enim blandit diam quis diam proin enim suspendisse massa.
+            Our team of experts is here to help you scale your business with
+            personalized strategies and solutions. Whether you're looking to
+            enhance your online presence, improve efficiency, or increase
+            conversions, Harbinger AR is your trusted partner for success.
           </p>
         </div>
         <div className="flex flex-col gap-8 xl:w-1/3 lg:w-1/2">

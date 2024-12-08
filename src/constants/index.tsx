@@ -17,44 +17,56 @@ export const solutions = [
   {
     icon: <AiOutlineMessage size={35} color="#3535DF" />,
     title: "Consulting",
-    description: "Pretium accumsan in ipsum convallis pellentesque metus",
+    description: "Customized strategies to meet your unique goals.",
   },
   {
     icon: <FaRegPaperPlane size={35} color="#3535DF" />,
     title: "Marketing",
-    description: "Pretium accumsan in ipsum convallis pellentesque metus",
+    description: "Boost your brand visibility and engagement.",
   },
   {
     icon: <FaRegObjectUngroup size={35} color="#3535DF" />,
     title: "Design",
-    description: "Pretium accumsan in ipsum convallis pellentesque metus",
+    description: "Create stunning visuals and user experiences.",
   },
 ];
 
 export const services = [
   {
     icon: <FaNetworkWired size={50} color="white" />,
-    title: "Digital Strategy",
+    title: "Website Development",
     description:
-      "Ultrices dictum integer quam morbi adipiscing suspendisse neque vel egestas commodo sit felis consectetur integer vitae, at mattis turpis id",
+      "Build modern, responsive, and visually appealing websites designed to attract and engage your target audience.",
   },
   {
     icon: <FaBullhorn size={50} color="white" />,
-    title: "Advertising",
+    title: "App Development",
     description:
-      "Ultrices dictum integer quam morbi adipiscing suspendisse neque vel egestas commodo sit felis consectetur integer vitae, at mattis turpis id",
+      "Create cutting-edge mobile and web apps that enhance user experience and drive business growth.",
   },
   {
     icon: <FaGlobe size={50} color="white" />,
-    title: "Online Marketing",
+    title: "Game Development",
     description:
-      "Ultrices dictum integer quam morbi adipiscing suspendisse neque vel egestas commodo sit felis consectetur integer vitae, at mattis turpis id",
+      "Bring your gaming concepts to life with immersive experiences designed for various platforms.",
   },
   {
     icon: <FaChartLine size={65} color="white" />,
-    title: "Search Engine Optimization",
+    title: "Plugins/Extensions",
     description:
-      "Ultrices dictum integer quam morbi adipiscing suspendisse neque vel egestas commodo sit felis consectetur integer vitae, at mattis turpis id",
+      "Develop custom plugins and extensions to improve functionality and meet your unique requirements.",
+  },
+  {
+    icon: <FaGlobe size={50} color="white" />,
+    title: "Automation Software",
+    description:
+      "Streamline operations and increase efficiency with our intelligent automation tools.",
+  },
+  {
+    icon: <FaChartLine size={65} color="white" />,
+    title: "Amazon Services",
+    description:
+      "Optimize and manage your Amazon business for increased sales and market reach.",
   },
 ];
 

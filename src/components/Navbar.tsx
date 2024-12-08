@@ -24,9 +24,7 @@ function Navbar() {
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-center space-x-32">
               <div>
-                <h1 className="text-3xl   tracking-tight font-semibold">
-                  Harbinger AR
-                </h1>
+                <img src="/logo.png" alt="" width={85} />
               </div>
               <ul className=" space-x-6 lg:flex hidden">
                 {navLinks.map((item, index) => (
