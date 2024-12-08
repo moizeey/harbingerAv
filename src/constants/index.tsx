@@ -2,9 +2,10 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { FaRegObjectUngroup } from "react-icons/fa";
 import { FaNetworkWired } from "react-icons/fa6";
-import { FaBullhorn } from "react-icons/fa";
+
 import { FaGlobe } from "react-icons/fa";
 import { FaChartLine } from "react-icons/fa";
+import { TiDeviceTablet } from "react-icons/ti";
 
 export const navLinks = [
   { labe: "Home", href: "/", isActive: true },
@@ -39,7 +40,7 @@ export const services = [
       "Build modern, responsive, and visually appealing websites designed to attract and engage your target audience.",
   },
   {
-    icon: <FaBullhorn size={50} color="white" />,
+    icon: <TiDeviceTablet size={50} color="white" />,
     title: "App Development",
     description:
       "Create cutting-edge mobile and web apps that enhance user experience and drive business growth.",

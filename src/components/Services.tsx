@@ -2,7 +2,7 @@ import { services } from "../constants";
 
 function Services() {
   return (
-    <div className="bg-[#F4F4F5]  relative md:pb-20 pb-10 ">
+    <div className="bg-[#F4F4F5]  relative   md:pb-20 pb-10 ">
       <div className="absolute right-0">
         <img src="../../arc2.svg " alt="arc" className="h-[70vh]" />
       </div>

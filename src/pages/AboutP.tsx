@@ -24,7 +24,7 @@ function AboutP() {
                 About
               </h1>
 
-              <p className="py-2 z-50  lg:text-left md:text-left  text-center max-w-[50rem] lg:text-3xl text-md sm:text-2xl">
+              <p className="py-2 z-0  lg:text-left md:text-left  text-center max-w-[50rem] lg:text-3xl text-md sm:text-2xl">
                 Sollicitudin eros nulla mus donec a quisque convallis integer
                 condimentum
               </p>
