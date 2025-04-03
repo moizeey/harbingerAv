@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { navLinks } from "../constants";
+import { footerAbout, navLinks } from "../constants";
 import { UseMenu } from "../context/navContext";
 import { RxCross1 } from "react-icons/rx";
+import { IoIosMenu } from "react-icons/io";
 import { useEffect } from "react";
 
 function Navbar() {
@@ -18,7 +19,7 @@ function Navbar() {
     }
   }, [menuToggle]);
   return (
-    <div>
+    <div className="">
       <nav className="  ">
         <div className="mx-auto relative  text-lg">
           <div className="flex items-center justify-between">
@@ -43,70 +44,83 @@ function Navbar() {
               </ul>
             </div>
             <div className="lg:hidden ">
-              <button onClick={handleToggleMenu} className={`rotate-90  `}>
-                {menuToggle ? "" : "|||"}
+              <button
+                onClick={handleToggleMenu}
+                className={` fixed text-black z-50 top-4 right-4 p-2  `}
+              >
+                {menuToggle ? (
+                  <RxCross1 size={24} />
+                ) : (
+                  <IoIosMenu color="white" size={24} />
+                )}
               </button>
-              {menuToggle && (
-                <div className="w-full fixed min-h-screen flex justify-end left-0 z-10 top-0">
-                  <div
-                    className="bg-black absolute opacity-50 w-full min-h-screen"
-                    onClick={() => setMenuToggle(false)}
-                  ></div>
-                  <div
-                    className={`bg-white flex flex-col z-20 w-1/2 sm:w-full min-w-[300px] max-w-[400px]   transform transition-transform duration-700 ease-in-out   ${
-                      menuToggle ? " translate-x-0 " : "translate-x-full"
-                    } `}
-                  >
-                    {menuToggle && (
-                      <div className="w-full flex justify-end">
-                        <button
-                          onClick={handleToggleMenu}
-                          className={` rotate-90 py-2 px-3`}
-                        >
-                          <RxCross1 color="black" size={25} />
-                        </button>
-                      </div>
-                    )}
-                    <ul className=" px-6 py-4 md:text-lg text-[#76767F] flex flex-col gap-2">
-                      {navLinks.map((item, index) => (
-                        <li
-                          className="cursor-pointer hover:underline"
-                          key={index}
-                        >
-                          <NavLink
-                            className={({ isActive }) => `
+
+              <div className="">
+                <div
+                  onClick={handleToggleMenu}
+                  className={`bg-black w-full h-full  fixed top-0 left-0 min-h-screen z-10 ease-in-out transition-opacity duration-300 
+                       ${menuToggle ? "opacity-50" : "opacity-0"} `}
+                >
+                  {" "}
+                </div>
+                <div
+                  className={`bg-white md:w-[60%] w-[80%] fixed right-0 top-0 min-h-screen z-10 p-5 ease-in-out transition-transform duration-300 
+                       
+                       ${menuToggle ? "translate-x-0" : "translate-x-full"} `}
+                >
+                  <ul className=" px-6 py-4 md:text-lg text-[#76767F] flex flex-col gap-2">
+                    {navLinks.map((item, index) => (
+                      <li
+                        className="cursor-pointer hover:underline"
+                        key={index}
+                      >
+                        <NavLink
+                          className={({ isActive }) => `
               ${isActive ? "text-[#121240CF]" : "text:white"}
               `}
-                            to={item.href}
-                          >
-                            {item.labe}
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="text-black flex flex-col ">
-                      <div className="px-6  border-t  py-6   border-zinc-300 ">
-                        <video
-                          className="rounded-md"
-                          src="/video/video2.mp4"
-                          loop
-                          autoPlay
-                          muted
-                        ></video>
-                      </div>
-                      <div className="flex flex-col gap-4  px-6 border-t border-b py-8  border-zinc-300">
-                        <h1 className="text-3xl   font-montserrat ">
-                          HarbingerAr
-                        </h1>
-                        <p className="text-[#76767F] ">
-                          Volutpat commodo at dictum amet tincidunt facilisis id
-                          lorem eu vitae cursus auctor laoreet fermentum.
-                        </p>
-                      </div>
+                          to={item.href}
+                        >
+                          {item.labe}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="text-black flex flex-col ">
+                    <div className="px-6  border-t  py-6   border-zinc-300 "></div>
+                    <div className="flex flex-col gap-4  px-6 border-t border-b py-8  border-zinc-300">
+                      <h1 className="text-3xl font-montserrat ">HarbingerAr</h1>
+                      <p className="text-[#76767F] ">
+                        Volutpat commodo at dictum amet tincidunt facilisis id
+                        lorem eu vitae cursus auctor laoreet fermentum. Your
+                        trusted partner for digital growth.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="text-black  px-6 my-6 border-b pb-5  border-zinc-300">
+                    <div className="flex flex-col gap-4  ">
+                      <h1 className=" text-3xl font-montserrat  ">About</h1>
+                      <ul className="flex flex-col gap-2">
+                        {footerAbout.map((item, index) => (
+                          <li key={index} className=" text-[#76767F]   ">
+                            {item.lable}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="text-black  px-6 my-6 border-b pb-5  border-zinc-300">
+                    <div className="flex flex-col gap-4 ">
+                      <h1 className="  text-3xl font-montserrat ">
+                        Contact Info
+                      </h1>
+                      <p className="text-[#76767F]  leading-[1.7rem]">
+                        123 Demo St, Lakeland, FL 45678, United States. +1
+                        123-456-7890 mail@example.com
+                      </p>
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
 
             <div className="space-x-6 lg:flex items-center hidden">
